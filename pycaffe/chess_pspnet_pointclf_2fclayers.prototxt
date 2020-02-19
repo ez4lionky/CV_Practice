@@ -1,0 +1,110 @@
+name: "FC_train"
+debug_info : true
+force_backward : true
+input: "data"
+input_dim: 64
+input_dim: 150
+input_dim: 1
+input_dim: 1
+
+input: "labels"
+input_dim: 64 # to be changed on-the-fly to match num ROIs
+input_dim: 1
+input_dim: 1
+input_dim: 1
+
+layer {
+	bottom: "data"
+	top: "fc6_points"
+	name: "fc6_points"
+	param {
+		lr_mult: 1.0
+	}
+	param {
+		lr_mult: 2.0
+	}
+	type: "InnerProduct"
+	inner_product_param {
+		num_output: 128
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+			value: 0
+		}
+	}
+}
+
+layer {
+	bottom: "fc6_points"
+	top: "fc6_points"
+	name: "relu6_points"
+	type: "ReLU"
+}
+
+
+
+layer {
+	bottom: "fc6_points"
+	top: "fc7_points"
+	name: "fc7_points"
+	param {
+		lr_mult: 1.0
+	}
+	param {
+		lr_mult: 2.0
+	}
+	type: "InnerProduct"
+	inner_product_param {
+		num_output: 64
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+			value: 0
+		}
+	}
+}
+
+layer {
+	bottom: "fc7_points"
+	top: "fc7_points"
+	name: "relu7_points"
+	type: "ReLU"
+}
+
+
+layer {
+	bottom: "fc7_points"
+	top: "points_cls_score"
+	name: "points_cls_score"
+	param {
+		lr_mult: 1.0
+	}
+	param {
+		lr_mult: 2.0
+	}
+	type: "InnerProduct"
+	inner_product_param {
+		num_output: 55
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+			value: 0
+		}
+	}
+}
+
+
+layer {
+	name: "loss_points_cls"
+	type: "SoftmaxWithLoss"
+	bottom: "points_cls_score"
+	bottom: "labels"
+	top: "loss_points_cls"
+
+}
