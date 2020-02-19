@@ -4,13 +4,6 @@
 CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: ../3DPointsReprojection.cpp
 CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /home/lionky/Desktop/CV_Practice/utils/ReadRTMatrix.h
 CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /home/lionky/Desktop/CV_Practice/utils/ReadXYZPointsTxt.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/bits/mman-linux.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/bits/mman-shared.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/bits/mman.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/bits/types.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/bits/typesizes.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/bits/wordsize.h
-CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/include/x86_64-linux-gnu/sys/mman.h
 CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/local/include/eigen3/Eigen/Cholesky
 CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/local/include/eigen3/Eigen/Core
 CMakeFiles/3DPointsReprojection.dir/3DPointsReprojection.cpp.o: /usr/local/include/eigen3/Eigen/Eigen2Support

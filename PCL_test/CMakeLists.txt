@@ -1,7 +1,8 @@
+ 
 cmake_minimum_required(VERSION 2.6)
 project(PCL_TEST)
 
-find_package(PCL 1.2 REQUIRED)
+find_package(PCL REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
